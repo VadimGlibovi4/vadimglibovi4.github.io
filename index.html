@@ -46,7 +46,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	}
 	initRingostat();
 </script>   
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
+<script> 
+$(document).ready(function(){ 
+     $("#div2").click(function(){ 
+         $.ajax({url: "http://qatest2.ringostat.net/barabashka.txt", success: function(result){ 
+  
+             $("#div1").html ("<span>" + result + "</span>"); 
+         }}); 
+     }); 
+}); 
+</script> 
+  
+<div class="ringo-phone" id="div1"></div> 
+<button  id="div2">barabashka</button>
 <!-- start-smoth-scrolling -->
 </head>
 	
